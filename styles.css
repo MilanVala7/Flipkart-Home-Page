@@ -6,14 +6,13 @@
 }
 
 body {
-    background-color: #f1f3f5;
+  background-color: #f1f3f5;
 }
 
 nav {
   width: 100%;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
 .top-nav {
@@ -179,7 +178,6 @@ nav {
   width: 100%;
   max-width: 1400px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow-x: hidden;
 }
 
 /* Section header styles */
@@ -222,10 +220,11 @@ nav {
 }
 
 /* Deals section styles */
-.deals-body { 
+.deals-body {
   display: flex;
-  position: relative;  
+  position: relative;
   padding: 10px 0px 20px;
+  overflow-x: auto;
 }
 
 .carousel-arrow {
@@ -238,7 +237,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 5;
   right: 0;
   border-radius: 4px 0 0 4px;
@@ -333,4 +332,126 @@ nav {
   padding-bottom: 5px;
 }
 
+@media (max-width: 1220px) {
 
+  .logo img {
+    margin-left: 20px;
+    height: 45px;
+  }
+
+  .nav-actions {
+    gap: 25px;
+    margin-left: 20px;
+  }
+
+  .category-bar {
+    gap: 30px;
+  }
+
+  .side-banner {
+    width: 200px;
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .search-box {
+    max-width: 420px;
+  }
+
+  .nav-actions {
+    margin-right: 16px;
+  }
+
+  .nav-actions button {
+    padding: 6px 24px;
+    font-size: 14px;
+  }
+
+  .category-bar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    gap: 24px;
+  }
+
+  .category-item {
+    flex: 0 0 auto;
+  }
+
+  .row-1 {
+    flex-direction: column;
+  }
+
+  .side-banner {
+    width: 100%;
+    margin: 10px 0 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /* Top navbar wraps */
+  .top-nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 0;
+  }
+
+  .search-box {
+    order: 3;
+    width: 100%;
+    max-width: none;
+    margin: 10px 16px 0;
+  }
+
+  .nav-actions {
+    gap: 20px;
+    margin-left: auto;
+    margin-right: 16px;
+  }
+
+  .header-left h2,
+  .header-left-2 h2 {
+    font-size: 20px;
+  }
+
+  .product-card {
+    width: 160px;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .category-item img {
+    height: 50px;
+    width: 60px;
+  }
+
+  .category-item span {
+    font-size: 12px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .product-card {
+    width: 140px;
+  }
+
+  .offer {
+    font-size: 13px;
+  }
+
+}
+
+.deals-body::-webkit-scrollbar {
+  display: none;
+}
